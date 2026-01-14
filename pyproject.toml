@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ri-mckee-ctc-calc"
+version = "0.1.0"
+description = "Analysis of Rhode Island Governor McKee's proposed child tax credit"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "PolicyEngine", email = "hello@policyengine.org"}
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "policyengine-us>=1.0.0",
+    "policyengine-core>=3.0.0",
+    "pandas>=2.0.0",
+    "plotly>=5.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/PolicyEngine/ri-mckee-ctc-calc"
+Repository = "https://github.com/PolicyEngine/ri-mckee-ctc-calc"
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
